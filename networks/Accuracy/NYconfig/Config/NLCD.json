@@ -1,0 +1,10 @@
+{
+  "classes":5,
+  "label":[
+    "Nodata",
+    "Open water",
+    "Tree canopy",
+    "Low vegetation",
+    "Intensity"
+        ]
+}
