@@ -4,6 +4,7 @@ High-resolution (HR) land-cover mapping is an important task for surveying the E
 
 <img src="https://github.com/Tusaifei/VCNet/blob/main/Fig/VCNet.png" width="70%">
 
+
 In this study, we utilize the framework to produce **a 1-m HR land-cover map for Shanghai, the economic epicenter of China**, with an accuracy of 72.26%. The complete 1-m resolution land-cover mapping results of Shanghai are shown below:
 
 <img src="https://github.com/Tusaifei/VCNet/blob/main/Fig/SHLand-1.png" width="70%">
@@ -36,10 +37,13 @@ easydict>=1.9
 
 ## Dataset Preparation  
 ### The Chesapeake Bay Dataset 
+
  <img src="https://github.com/Tusaifei/VCNet/blob/main/Fig/Chesapeake.png" width="70%">
+ 
  The Chesapeake Bay Dataset contains 1-meter resolution images and a 30-meter resolution land-cover product as the training data pairs and also contains a 1-meter resolution ground reference for assessment.
- If you want to run the code with the default Chesapeake dataset, we provide example data for the state of New York. Download the dataset at [**Baidu cloud**](https://pan.baidu.com/s/1FOCRmWenNmJ9mYDKBK_uXQ?pwd=2024) and put them at *"./dataset/Chesapeake_NewYork_dataset"*.
- * **The HR aerial images** with 1-meter resolution were captured by the U.S. Department of Agriculture’s National Agriculture Imagery Program (NAIP).
+ If you want to run the code with the default Chesapeake dataset, we provide example data for the state of New York. Download the dataset at Microsoft's website: https://lila.science/datasets/chesapeakelandcover and put them at `./dataset/Chesapeake_NewYork_dataset`.
+ 
+* **The HR aerial images** with 1-meter resolution were captured by the U.S. Department of Agriculture’s National Agriculture Imagery Program (NAIP).
 * **The LR labels** with 30-meter resolution derived from the USGS’s National Land Cover Database (NLCD), consist of 16 land-cover classes.
 * **The HR (1 m) ground truths** used for accuracy assessment, were obtained from the Chesapeake Bay Conservancy Land Cover (CCLC) project.
    
