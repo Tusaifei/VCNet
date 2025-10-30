@@ -45,7 +45,16 @@ easydict>=1.9
 * **The HR aerial images** with 1-meter resolution were captured by the U.S. Department of Agriculture’s National Agriculture Imagery Program (NAIP).
 * **The LR labels** with 30-meter resolution derived from the USGS’s National Land Cover Database (NLCD), consist of 16 land-cover classes.
 * **The HR (1 m) ground truths** used for accuracy assessment, were obtained from the Chesapeake Bay Conservancy Land Cover (CCLC) project.
-   
+
+### The Tokyo Dataset 
+
+ <img src="https://github.com/Tusaifei/VCNet/blob/main/Fig/Tokyo.png" width="70%">
+ The Tokyo dataset includes 0.5-m resolution images, two kinds of 10-m resolution LCPs, and two kinds of 30-m resolution LCPs to construct the training data pairs with different combinations.
+
+* **The HR aerial images(0.5 m/pixel)** with red (R), green (G), blue (B) bands, were collected from the OpenEarthMap dataset where the image sources are from the Geospatial Information Authority of Japan.
+* **The LR labels** with 10-m resolution were collected from (1) The ESA GLC10 provided by the European Space Agency (ESA), and (2) The ESRI global LCPs, abbreviated as ESRI GLC10, provided by the ESRI Inc. and IO Inc. The 30-m resolution labels were collected from (1) The global LCPs GLC FCS30 provided by the Chinese Academy of Sciences, and (2) The Globeland30  provided by the National Geomatics Center of China.
+* **The HR (0.5 m) ground truths** were obtained from the OpenEarthMap dataset and contained eight land-cover types.
+ 
 
 ### Data Structure  
 ```
@@ -62,8 +71,8 @@ dataset/
 ### Configuration Instructions  
 Modify the following parameters in `train.py`:  
 - `--dataset`: Specify the dataset name (e.g., `Chesapeake`)  
-- `--list_dir`: Point to the CSV list file path  
-
+- `--list_dir`: Point to the CSV list file path
+- 
 
 ## Code Structure  
 ```
@@ -124,3 +133,4 @@ net = EncoderDecoder(
     pretrained="/path/to/pretrained_model.pth"
 ).cuda()
 ```
+
